@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-  func cameraUpdateView(_ cameraType: Binding<CameraType>, showing: Binding<Bool>) -> some View {
+  func cameraUpdatedView(_ cameraType: Binding<CameraType>, showing: Binding<Bool>) -> some View {
     ZStack(alignment: .top) {
       self
       

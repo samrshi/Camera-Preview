@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject var publisher = CameraPublisher()
-  @State private var showing: Bool = false
+  @State private var showingCameraName: Bool = false
   
   var isLandscape: Bool {
     !UIDevice.current.orientation.isPortrait
@@ -22,13 +22,13 @@ struct ContentView: View {
       
       ControlsView(publisher: publisher)
     }
+    .cameraUpdatedView($publisher.currentCamera, showing: $showingCameraName)
     .onTapGesture(count: 2, perform: publisher.toggleWide)
     .statusBar(hidden: publisher.hideStatusBar)
-    .cameraUpdateView($publisher.currentCamera, showing: $showing)
     .onChange(of: publisher.currentCamera) { _ in
-      showing = true
+      showingCameraName = true
       Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
-        showing = false
+        showingCameraName = false
       }
     }
   }
