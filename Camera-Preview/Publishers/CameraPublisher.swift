@@ -10,7 +10,14 @@ import SwiftUI
 class CameraPublisher: ObservableObject {
   @Published var currentCamera: CameraType = .front
   @Published var hideStatusBar: Bool = true
+  @Published var isLandscape: Bool = false
   
+  init() {
+    let nc = NotificationCenter.default
+    let name = UIDevice.orientationDidChangeNotification
+    nc.addObserver(self, selector: #selector(didRotate), name: name, object: nil)
+  }
+
   func toggleFrontBack() {
     if currentCamera == .wide || currentCamera == .back {
       currentCamera = .front
@@ -32,5 +39,9 @@ class CameraPublisher: ObservableObject {
     if orientation != .landscapeLeft && orientation != .landscapeRight {
       hideStatusBar.toggle()
     }
+  }
+  
+  @objc func didRotate() {
+    isLandscape = UIDevice.current.orientation.isLandscape
   }
 }

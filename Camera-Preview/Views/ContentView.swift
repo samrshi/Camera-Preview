@@ -22,7 +22,7 @@ struct ContentView: View {
       
       ControlsView(publisher: publisher)
     }
-    .cameraUpdatedView($publisher.currentCamera, showing: $showingCameraName)
+    .cameraUpdatedView(publisher, isPresented: $showingCameraName)
     .onTapGesture(count: 2, perform: publisher.toggleWide)
     .statusBar(hidden: publisher.hideStatusBar)
     .onChange(of: publisher.currentCamera) { _ in

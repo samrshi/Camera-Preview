@@ -24,7 +24,8 @@ class CameraVC: UIViewController {
     
     // Subscribe to deivce orientation change notifications
     let nc = NotificationCenter.default
-    nc.addObserver(self, selector: #selector(deviceWasRotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+    let name = UIDevice.orientationDidChangeNotification
+    nc.addObserver(self, selector: #selector(deviceWasRotated), name: name, object: nil)
   }
   
   /// Retrieve camera devices and configure camera preview view

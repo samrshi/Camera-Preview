@@ -22,7 +22,7 @@ struct ControlsView: View {
           .padding(.horizontal, 10)
       }
     }
-    .padding(.top, 10)
+    .padding(.top, 5)
     .font(.title)
   }
 }
