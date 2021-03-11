@@ -8,32 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		BD18A3E825F211CE001A93FF /* CameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3E725F211CE001A93FF /* CameraApp.swift */; };
-		BD18A3EA25F211CE001A93FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3E925F211CE001A93FF /* ContentView.swift */; };
+		BD18A3EA25F211CE001A93FF /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3E925F211CE001A93FF /* MainScreen.swift */; };
 		BD18A3EC25F211D0001A93FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18A3EB25F211D0001A93FF /* Assets.xcassets */; };
 		BD18A3EF25F211D0001A93FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18A3EE25F211D0001A93FF /* Preview Assets.xcassets */; };
 		BD18A3F825F21634001A93FF /* CameraWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3F725F21634001A93FF /* CameraWrapper.swift */; };
-		BD18A3FE25F21815001A93FF /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3FD25F21815001A93FF /* CameraVC.swift */; };
+		BD18A3FE25F21815001A93FF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18A3FD25F21815001A93FF /* CameraViewController.swift */; };
 		BD37CA1025F5ED5900BF550F /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD37CA0F25F5ED5900BF550F /* CameraType.swift */; };
 		BD785EC525F5FBE7000D9B2F /* Helper+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD785EC425F5FBE7000D9B2F /* Helper+Orientation.swift */; };
 		BD835E9925F69A9500223FDF /* CameraPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD835E9825F69A9500223FDF /* CameraPublisher.swift */; };
 		BDDC12D225F6BD4E001996B1 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC12D125F6BD4E001996B1 /* ControlsView.swift */; };
-		BDDC12D625F6BE4F001996B1 /* CameraUpdatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC12D525F6BE4F001996B1 /* CameraUpdatedView.swift */; };
+		BDDC12D625F6BE4F001996B1 /* CameraNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC12D525F6BE4F001996B1 /* CameraNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD18A3E425F211CE001A93FF /* Camera-Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera-Preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD18A3E725F211CE001A93FF /* CameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraApp.swift; sourceTree = "<group>"; };
-		BD18A3E925F211CE001A93FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BD18A3E925F211CE001A93FF /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		BD18A3EB25F211D0001A93FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD18A3EE25F211D0001A93FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD18A3F025F211D0001A93FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD18A3F725F21634001A93FF /* CameraWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWrapper.swift; sourceTree = "<group>"; };
-		BD18A3FD25F21815001A93FF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		BD18A3FD25F21815001A93FF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BD37CA0F25F5ED5900BF550F /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		BD785EC425F5FBE7000D9B2F /* Helper+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Orientation.swift"; sourceTree = "<group>"; };
 		BD835E9825F69A9500223FDF /* CameraPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPublisher.swift; sourceTree = "<group>"; };
 		BDDC12D125F6BD4E001996B1 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
-		BDDC12D525F6BE4F001996B1 /* CameraUpdatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUpdatedView.swift; sourceTree = "<group>"; };
+		BDDC12D525F6BE4F001996B1 /* CameraNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 			children = (
 				BD18A3E725F211CE001A93FF /* CameraApp.swift */,
 				BD835E9725F69A7700223FDF /* Publishers */,
+				BDFBA0C325F9A2BF00959C31 /* Screens */,
 				BD37CA1225F5ED6900BF550F /* Views */,
 				BD785EC325F5FBD1000D9B2F /* Helpers */,
 				BD1910A425F6B510008AD73D /* Utils */,
@@ -96,11 +97,8 @@
 		BD37CA1225F5ED6900BF550F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD18A3E925F211CE001A93FF /* ContentView.swift */,
-				BD18A3F725F21634001A93FF /* CameraWrapper.swift */,
-				BD18A3FD25F21815001A93FF /* CameraVC.swift */,
-				BDDC12D125F6BD4E001996B1 /* ControlsView.swift */,
-				BDDC12D525F6BE4F001996B1 /* CameraUpdatedView.swift */,
+				BDFBA0C925F9A3C000959C31 /* Camera Preview */,
+				BDFBA0CD25F9A4DE00959C31 /* Control and Info UI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +118,32 @@
 				BD835E9825F69A9500223FDF /* CameraPublisher.swift */,
 			);
 			path = Publishers;
+			sourceTree = "<group>";
+		};
+		BDFBA0C325F9A2BF00959C31 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BD18A3E925F211CE001A93FF /* MainScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BDFBA0C925F9A3C000959C31 /* Camera Preview */ = {
+			isa = PBXGroup;
+			children = (
+				BD18A3F725F21634001A93FF /* CameraWrapper.swift */,
+				BD18A3FD25F21815001A93FF /* CameraViewController.swift */,
+			);
+			path = "Camera Preview";
+			sourceTree = "<group>";
+		};
+		BDFBA0CD25F9A4DE00959C31 /* Control and Info UI */ = {
+			isa = PBXGroup;
+			children = (
+				BDDC12D125F6BD4E001996B1 /* ControlsView.swift */,
+				BDDC12D525F6BE4F001996B1 /* CameraNameView.swift */,
+			);
+			path = "Control and Info UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,12 +217,12 @@
 			files = (
 				BD785EC525F5FBE7000D9B2F /* Helper+Orientation.swift in Sources */,
 				BD835E9925F69A9500223FDF /* CameraPublisher.swift in Sources */,
-				BDDC12D625F6BE4F001996B1 /* CameraUpdatedView.swift in Sources */,
-				BD18A3EA25F211CE001A93FF /* ContentView.swift in Sources */,
+				BDDC12D625F6BE4F001996B1 /* CameraNameView.swift in Sources */,
+				BD18A3EA25F211CE001A93FF /* MainScreen.swift in Sources */,
 				BD37CA1025F5ED5900BF550F /* CameraType.swift in Sources */,
 				BDDC12D225F6BD4E001996B1 /* ControlsView.swift in Sources */,
 				BD18A3E825F211CE001A93FF /* CameraApp.swift in Sources */,
-				BD18A3FE25F21815001A93FF /* CameraVC.swift in Sources */,
+				BD18A3FE25F21815001A93FF /* CameraViewController.swift in Sources */,
 				BD18A3F825F21634001A93FF /* CameraWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,11 @@ import SwiftUI
 struct CameraWrapper: UIViewControllerRepresentable {
   @ObservedObject var publisher: CameraPublisher
 
-  func makeUIViewController(context: Context) -> CameraVC {
-    return CameraVC()
+  func makeUIViewController(context: Context) -> CameraViewController {
+    return CameraViewController()
   }
   
-  func updateUIViewController(_ uiViewController: CameraVC, context: Context) {
+  func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {
     uiViewController.updateCamera(to: publisher.currentCamera)
   }
 }

@@ -7,17 +7,7 @@
 
 import SwiftUI
 
-extension View {
-  func cameraUpdatedView(_ publisher: CameraPublisher, isPresented: Binding<Bool>) -> some View {
-    ZStack(alignment: .top) {
-      self
-      
-      CameraUpdatedView(publisher: publisher, isPresented: isPresented)
-    }
-  }
-}
-
-struct CameraUpdatedView: View {
+struct CameraNameView: View {
   @ObservedObject var publisher: CameraPublisher
   @Binding var isPresented: Bool
   
@@ -26,11 +16,19 @@ struct CameraUpdatedView: View {
       .bold()
       .foregroundColor(.white)
       .padding()
-      .background(Color(UIColor.systemGray))
-      .clipShape(Capsule())
-      .opacity(0.5)
+      .background(Capsule().fill(Color(.systemGray)).opacity(0.5))
       .offset(x: 0, y: isPresented ? 0 : -225)
-      .animation(.default)
       .padding(.top, publisher.isLandscape ? 5 : 0)
+      .animation(.default)
+  }
+}
+
+extension View {
+  func cameraNameView(_ publisher: CameraPublisher, isPresented: Binding<Bool>) -> some View {
+    ZStack(alignment: .top) {
+      self
+      
+      CameraNameView(publisher: publisher, isPresented: isPresented)
+    }
   }
 }

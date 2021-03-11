@@ -7,13 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainScreen: View {
   @StateObject var publisher = CameraPublisher()
   @State private var showingCameraName: Bool = false
-  
-  var isLandscape: Bool {
-    !UIDevice.current.orientation.isPortrait
-  }
   
   var body: some View {
     ZStack(alignment: .topLeading) {
@@ -22,14 +18,16 @@ struct ContentView: View {
       
       ControlsView(publisher: publisher)
     }
-    .cameraUpdatedView(publisher, isPresented: $showingCameraName)
+    .cameraNameView(publisher, isPresented: $showingCameraName)
     .onTapGesture(count: 2, perform: publisher.toggleWide)
+    .onChange(of: publisher.currentCamera, perform: showCameraName)
     .statusBar(hidden: publisher.hideStatusBar)
-    .onChange(of: publisher.currentCamera) { _ in
-      showingCameraName = true
-      Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
-        showingCameraName = false
-      }
+  }
+  
+  func showCameraName<T>(_: T) where T: Equatable {
+    showingCameraName = true
+    Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
+      showingCameraName = false
     }
   }
 }

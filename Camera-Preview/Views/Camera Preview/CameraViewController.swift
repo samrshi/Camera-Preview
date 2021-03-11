@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import AVFoundation
 
-class CameraVC: UIViewController {
+class CameraViewController: UIViewController {
   let captureSession = AVCaptureSession()
   var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
   
@@ -22,18 +22,16 @@ class CameraVC: UIViewController {
     super.viewDidLoad()
     configure()
     
-    // Subscribe to deivce orientation change notifications
-    let nc = NotificationCenter.default
     let name = UIDevice.orientationDidChangeNotification
-    nc.addObserver(self, selector: #selector(deviceWasRotated), name: name, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(deviceWasRotated), name: name, object: nil)
   }
   
   /// Retrieve camera devices and configure camera preview view
   private func configure() {
-    // Get the front, back, and ultrawide cameras
+    // fetch the front, back, and ultrawide cameras
     let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera, .builtInUltraWideCamera], mediaType: AVMediaType.video, position: .unspecified)
     
-    // set variables to reference later
+    // set variables for future references
     for device in deviceDiscoverySession.devices {
       if device.deviceType == .builtInUltraWideCamera {
         ultraWideCamera = device
@@ -43,8 +41,6 @@ class CameraVC: UIViewController {
         frontFacingCamera = device
       }
     }
-    
-    // set back camera as default
     updateCamera(to: .back)
     
     // Create and configure a camera preview
@@ -63,12 +59,10 @@ class CameraVC: UIViewController {
   /// Change the current camera device shown in the preview
   /// - Parameter newCamera: the new camera type
   func updateCamera(to newCamera: CameraType) {
-    // Remove current inputs
     for input in self.captureSession.inputs {
       self.captureSession.removeInput(input)
     }
       
-    // Pick the correct camera device
     let newDevice: AVCaptureDevice
     switch newCamera {
     case .back:
