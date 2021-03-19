@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFBA0C925F9A3C000959C31 /* Camera Preview */,
-				BDFBA0CD25F9A4DE00959C31 /* Control and Info UI */,
+				BDFBA0CD25F9A4DE00959C31 /* Control and Info Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,13 +137,13 @@
 			path = "Camera Preview";
 			sourceTree = "<group>";
 		};
-		BDFBA0CD25F9A4DE00959C31 /* Control and Info UI */ = {
+		BDFBA0CD25F9A4DE00959C31 /* Control and Info Views */ = {
 			isa = PBXGroup;
 			children = (
 				BDDC12D125F6BD4E001996B1 /* ControlsView.swift */,
 				BDDC12D525F6BE4F001996B1 /* CameraNameView.swift */,
 			);
-			path = "Control and Info UI";
+			path = "Control and Info Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
